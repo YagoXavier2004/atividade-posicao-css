@@ -1,0 +1,194 @@
+/* ==========================================================================
+   CSS BÁSICO INICIAL - LABORATÓRIO DE POSICIONAMENTO E Z-INDEX
+   Apenas cores, fontes e tamanhos básicos de texto.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  min-height: 2200px;
+}
+
+/* --------------------------------------------------------------------------
+   1. CABEÇALHO / HUD (Desafio: Preso no topo ao rolar a página)
+   -------------------------------------------------------------------------- */
+.hud-superior {
+  background-color: #1e293b;
+  border-bottom: 2px solid #334155;
+  padding: 15px 20px;
+  color: #38bdf8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hud-titulo {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.hud-status-servidor {
+  font-size: 12px;
+  color: #4ade80;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  bottom: 10px;
+  background-color: #243d26;
+  border-radius: 20px;
+  border: 1px solid #4ade80;
+  padding: 4px 10px;
+}
+
+/* --------------------------------------------------------------------------
+   2. CONTEÚDO PRINCIPAL
+   -------------------------------------------------------------------------- */
+.container-arena {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.titulo-secao {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  position: absolute;
+  top: 90px;
+  left: 30%;
+  bottom: auto;
+  right: auto;
+}
+
+.descricao-secao {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  position: absolute;
+  top: 110px;
+  left: 24%;
+  bottom: auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. CARDS DE CAMPEÕES (Desafio: Referência de posicionamento para os filhos)
+   -------------------------------------------------------------------------- */
+.card-campeao {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 320px;
+  display: inline-block;
+  top: 100px;
+  vertical-align: top;
+  margin-right: 30px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.img-personagem {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.nome-personagem {
+  font-size: 18px;
+  color: #f8fafc;
+  margin: 12px 0 4px 0;
+}
+
+.classe-personagem {
+  font-size: 13px;
+  color: #38bdf8;
+  margin: 0 0 8px 0;
+}
+
+.detalhes-personagem {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.btn-acao {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn-desbloquear {
+  background-color: #363633;
+}
+
+/* --------------------------------------------------------------------------
+   4. BADGES E TAGS (Desafio: Desacoplar do fluxo sobre a imagem)
+   -------------------------------------------------------------------------- */
+.badge-raridade {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 10;
+  border-radius: 4px;
+}
+.tag-lendario {
+  background-color: orange;
+}
+.tag-epico {
+  background-color: #8b5cf6;
+}
+.tag-raro {
+  background-color: #3b82f6;
+}
+
+.tag-status {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.tag-pronto {
+  background-color: #16a34a;
+}
+.tag-bloqueado {
+  background-color: #dc2626;
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTÃO DE CHAT (Desafio: Fixar no canto inferior direito da tela)
+   -------------------------------------------------------------------------- */
+.btn-chat-squad {
+  background-color: #10b981;
+  color: #022c22;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+  border-radius: 20px;
+
+}
